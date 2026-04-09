@@ -1,0 +1,23 @@
+Objective:
+Create users, groups, and permissions
+
+Steps:
+# Create group
+sudo groupadd devops
+
+# Create users
+sudo useradd -m user1
+sudo useradd -m user2
+
+# Set password
+sudo passwd user1
+sudo passwd user2
+
+# Add users to group
+sudo usermod -aG devops user1
+sudo usermod -aG devops user2
+
+Set Shared Folder:
+sudo mkdir /project
+sudo chown :devops /project
+sudo chmod 770 /project
